@@ -14,7 +14,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS ON) # not required, but speeds up compilation of SCAPIX_META_STRING with clang and gcc
 
-add_library(bridgelib SHARED contact.h)
+add_library(bridge SHARED contact.h)
 
 find_package(Scapix REQUIRED)
-scapix_bridge_headers(bridgelib "com.scapix.bridge" contact.h)
+scapix_bridge_headers(bridge "com.example.bridge" contact.h)
