@@ -11,6 +11,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(cmodule)
 
 add_library(bridge SHARED contact.h)
+target_include_directories(bridge PRIVATE .)
 
 find_package(Scapix REQUIRED)
 scapix_bridge_headers(bridge "com.example.bridge" contact.h)
